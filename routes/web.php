@@ -33,6 +33,13 @@ Route::any('/id_card/{id}', function ($id) {
     echo $ImgfileEncode;
      exit;
 });
+Route::any('/valid_id/{id}', function ($id) {
+	 if($id == '123' | $id == '125')
+	 	return 1;
+	 else
+	 	return 0;
+    exit;
+});
 
 Route::any('/test', function () {
 	 echo 'test data';
