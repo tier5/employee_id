@@ -26,6 +26,15 @@ Route::any('/android', function () {
     echo $ImgfileEncode;
     exit;
 });
+Route::get('/id_card/{id}', function ($id) {
+	 
+     $localFileName  = '../storage/uploads/'.$id.'.jpg';
+     $fileData = file_get_contents($localFileName);
+     $ImgfileEncode = base64_encode($fileData);
+
+    echo $ImgfileEncode;
+     exit;
+});
 
 Route::any('/test', function () {
 	 echo 'test data';
