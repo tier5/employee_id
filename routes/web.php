@@ -26,7 +26,7 @@ Route::any('/android', function () {
     echo $ImgfileEncode;
     exit;
 });
-Route::get('/id_card/{id}', function ($id) {
+Route::any('/id_card/{id}', function ($id) {
 	 
      $localFileName  = '../storage/uploads/'.$id.'.jpg';
      $fileData = file_get_contents($localFileName);
