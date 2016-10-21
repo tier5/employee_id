@@ -26,3 +26,8 @@ Route::any('/android', function () {
     echo $ImgfileEncode;
     exit;
 });
+
+Route::any('/test', function () {
+	 echo 'test data';
+    exit;
+});
