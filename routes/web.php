@@ -18,13 +18,11 @@ Route::resource('employees', 'EmployeeController');
 Route::resource('api/nerds', 'NerdController');
 
 Route::any('/android', function () {
-	 $name = 'download';
-     $localFileName  = '../storage/uploads/'.$name.'.jpg';
-     $fileData = file_get_contents($localFileName);
-     $ImgfileEncode = base64_encode($fileData);
-
-    echo $ImgfileEncode;
-    exit;
+	 return array(
+      1 => "John",
+      2 => "Mary",
+      3 => "Steven"
+    );
 });
 Route::any('/id_card/{id}', function ($id) {
 	 
