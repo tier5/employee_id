@@ -34,7 +34,7 @@ Route::any('/id_card/{id}', function ($id) {
      exit;
 });
 Route::any('/valid_id/{id}', function ($id) {
-	 if($id == '123' | $id == '125')
+	 if($id == '124' | $id == '125')
 	 	return 1;
 	 else
 	 	return 0;
